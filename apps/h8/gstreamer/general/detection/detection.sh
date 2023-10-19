@@ -8,13 +8,13 @@ function init_variables() {
     source $script_dir/../../../../../scripts/misc/checks_before_run.sh
 
     readonly POSTPROCESS_DIR="$TAPPAS_WORKSPACE/apps/h8/gstreamer/libs/post_processes/"
-    readonly RESOURCES_DIR="$TAPPAS_WORKSPACE/apps/h8/gstreamer/general/detection/resources"
+    readonly RESOURCES_DIR="$TAPPAS_WORKSPACE/apps/h8/gstreamer/general/license_plate_recognition/resources"
 
     readonly DEFAULT_POSTPROCESS_SO="$POSTPROCESS_DIR/libyolo_hailortpp_post.so"
-    readonly DEFAULT_NETWORK_NAME="yolov5"
+    readonly DEFAULT_NETWORK_NAME="yolov5m_vehicles"
     readonly DEFAULT_BATCH_SIZE="1"
-    readonly DEFAULT_VIDEO_SOURCE="$RESOURCES_DIR/detection.mp4"
-    readonly DEFAULT_HEF_PATH="$RESOURCES_DIR/yolov5m_wo_spp_60p.hef"
+    readonly DEFAULT_VIDEO_SOURCE="$RESOURCES_DIR/lpr_ayalon.mp4"
+    readonly DEFAULT_HEF_PATH="$RESOURCES_DIR/yolov5m_vehicles.hef"
 
 
     video_sink_element=$([ "$XV_SUPPORTED" = "true" ] && echo "xvimagesink" || echo "ximagesink")
