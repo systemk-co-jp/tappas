@@ -1,6 +1,7 @@
 ### Tappas template
 **/resources/
 core/open_source/
+gstshark*
 
 ### CUDA template
 *.i
